@@ -8,4 +8,4 @@ def fizzbuzz():
             s += "Buzz"
         if (not s):
             s = str(i)
-        print(s, end = " ")
+        print(s, end=" ")
