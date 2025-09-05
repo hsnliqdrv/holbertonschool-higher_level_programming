@@ -1,8 +1,9 @@
 #!/usr/bin/python3
+def toupper(char):
+    if (97 <= ord(char) < 97 + 26):
+        return chr(ord(char) - 32)
+    return char
 def uppercase(str):
     for i in range(len(str)):
-        if (97 <= ord(str[i]) < 97 + 26):
-            print("{}".format(chr(ord(str[i]) - 32)), end="")
-        else:
-            print("{}".format(str[i]), end="")
+        print(toupper(str[i]), end="")
     print()
