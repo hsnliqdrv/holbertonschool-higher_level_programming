@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 import random
 number = random.randint(-10000, 10000)
-k = number % 10 if number >= 0 else (10 - number % 10)
+k = number % 10 if number >= 0 else (number % 10 - 10)
 print("Last digit of", number, "is", k, "and", end=" ")
 if (k > 5):
     print("is greater than 5")
