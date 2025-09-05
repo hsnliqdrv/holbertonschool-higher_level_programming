@@ -5,5 +5,5 @@ def toupper(char):
     return char
 def uppercase(str):
     for i in range(len(str)):
-        print(toupper(str[i]), end="")
+        print("{}".format(toupper(str[i])), end="")
     print()
