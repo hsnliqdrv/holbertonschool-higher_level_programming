@@ -12,6 +12,7 @@ def list_division(my_list_1, my_list_2, list_length):
                 print("wrong type")
             if isinstance(e, IndexError):
                 print("out of range")
+                break
         finally:
             l[i] = c
     return l
