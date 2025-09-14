@@ -25,7 +25,8 @@ def matrix_divided(matrix, div):
                 return False
         return True
     if (not isListOfListsOfNumbers(matrix)):
-        raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+        raise TypeError("matrix must be a matrix (list of lists) of \
+integers/floats")
     if (len({len(row) for row in matrix}) > 1):
         raise TypeError("Each row of the matrix must have the same size")
     if (type(div) not in [float, int]):
