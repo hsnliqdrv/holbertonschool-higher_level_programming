@@ -22,8 +22,9 @@ class TestMaxInteger(unittest.TestCase):
     def test_Mixed(self):
         self.assertEqual(max_integer([1, 4, -1, 7, 0, 3, -15, 12]), 12)
 
-    def test_OneElem(self):
-        self.assertEqual(max_integer([0]), 0)
+    def test_OneElement(self):
+        self.assertEqual(max_integer([1]), 1)
+        self.assertEqual(max_integer([-1]), -1)
 
     def test_EmptyArray(self):
         self.assertEqual(max_integer([]), None)
