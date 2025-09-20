@@ -96,9 +96,9 @@ class Rectangle:
         """
         if (self.width == 0 or self.height == 0):
             return ""
-        return "\n".join(\
-                [str(self.print_symbol) * self.width]\
-                * self.height)
+        return "\n".join(
+                [str(self.print_symbol) * self.width] * self.height
+        )
 
     def __repr__(self):
         """Eval representation of rectangle
