@@ -22,6 +22,10 @@ class Rectangle:
         Returns:
             Rectangle: bigger one
         """
+        if not isinstance(rect_1, Rectangle):
+            raise TypeError("rect_1 must be an instance of Rectangle")
+        if not isinstance(rect_2, Rectangle):
+            raise TypeError("rect_2 must be an instance of Rectangle")
         return max(rect_1, rect_2, key=Rectangle.area)
 
     def __init__(self, width=0, height=0):
