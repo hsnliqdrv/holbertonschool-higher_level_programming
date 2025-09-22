@@ -3,6 +3,8 @@
 
 This module provides a function inherits_from
 """
+
+
 def inherits_from(obj, a_class):
     """Check if obj's class inherited from a_class
 
