@@ -12,8 +12,7 @@
 >>> l.append(2)
 >>> l.append(1)
 >>> l.append(-4)
->>> l.print_sorted()
+>>> ret = l.print_sorted()
 [-4, 1, 2, 3]
->>> type(l.print_sorted()) is list
-[-4, 1, 2, 3]
+>>> type(ret) == list and ret != l
 False
