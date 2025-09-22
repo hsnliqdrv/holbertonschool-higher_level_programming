@@ -14,5 +14,5 @@
 >>> l.append(-4)
 >>> ret = l.print_sorted()
 [-4, 1, 2, 3]
->>> ret.__class__ == list
+>>> isinstance(ret, MyList)
 False
