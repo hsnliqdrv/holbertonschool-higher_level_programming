@@ -1,4 +1,4 @@
-#!usr/bin/python3
+#!/usr/bin/python3
 """1-my_list
 
 This module provides MyList class
