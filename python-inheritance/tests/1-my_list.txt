@@ -6,8 +6,6 @@
 >>> l.print_sorted()
 []
 >>> l = MyList()
->>> l.__str__
-<method-wrapper '__str__' of MyList object at 0x73b36ed1fac0>
 >>> l.__str__()
 '[]'
 >>> l.append(3)
