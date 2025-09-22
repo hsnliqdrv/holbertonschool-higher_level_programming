@@ -14,6 +14,6 @@
 >>> l.append(-4)
 >>> l.print_sorted()
 [-4, 1, 2, 3]
->>> isinstance(l.print_sorted(), list)
+>>> type(l.print_sorted()) is list
 [-4, 1, 2, 3]
 False
