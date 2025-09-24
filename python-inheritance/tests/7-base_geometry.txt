@@ -1,0 +1,20 @@
+>>> BaseGeometry = __import__("7-base_geometry").BaseGeometry
+>>> b = BaseGeometry()
+>>> b.area()
+Traceback (most recent call last):
+	...
+Exception: area() is not implemented
+>>> b.integer_validator("MyInteger", 0)
+Traceback (most recent call last):
+	...
+ValueError: MyInteger must be greater than 0
+>>> b.integer_validator("MyInteger", -1)
+Traceback (most recent call last):
+	...
+ValueError: MyInteger must be greater than 0
+>>> b.integer_validator("MyInteger", 1)
+>>> b.integer_validator("MyInteger", "1")
+Traceback (most recent call last):
+	...
+TypeError: MyInteger must be an integer
+>>> b.integer_validator("", 1)
