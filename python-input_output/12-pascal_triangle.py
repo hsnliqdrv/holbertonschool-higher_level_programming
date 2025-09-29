@@ -21,5 +21,6 @@ def pascal_triangle(n):
             arr[-1][j] += arr[-1][j - 1]
     return arr
 
+
 if __name__ == "__main__":
     print(pascal_triangle(5))
