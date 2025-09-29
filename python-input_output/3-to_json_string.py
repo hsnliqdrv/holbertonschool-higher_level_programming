@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """3-to_json_string
 """
+import json
 
 
 def to_json_string(my_obj):
@@ -12,5 +13,4 @@ def to_json_string(my_obj):
     Returns:
         (str): serialized object
     """
-    with json.dumps(my_obj) as json_repr:
-        return json_repr
+    return json.dumps(my_obj)
