@@ -25,6 +25,6 @@ class Student:
         Returns: (dict)
         """
         d = self.__dict__
-        if (type(attrs) is list and all(type(x) is str for x in attrs):
+        if (type(attrs) is list and all(type(x) is str for x in attrs)):
             return dict([item for item in d.items() if item[0] in attrs])
         return d
