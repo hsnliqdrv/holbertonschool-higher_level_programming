@@ -10,4 +10,4 @@ def read_file(filename=""):
         filename (str): the path to file
     """
     with open(filename, "r") as f:
-        print(f.read())
+        print(f.read(), end="")
