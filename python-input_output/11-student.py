@@ -35,5 +35,5 @@ class Student:
         Arguments:
             json (dict): dictionary
         """
-        for key in json.keys():
-            self[key] = json[key]
+        for key, value in json.items():
+            setattr(self, key, value)
