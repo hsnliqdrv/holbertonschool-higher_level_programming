@@ -6,9 +6,15 @@ class CustomObject:
             self.age = age
             self.is_student = is_student
         def serialize(self, filename):
-            with open(filename, "w") as file:
-                pickle.dump(self, file)
+            try:
+                with open(filename, "wb") as file:
+                    pickle.dump(self, file)
+            except Exception as e:
+                pass
         @classmethod
         def deserialize(cls, filename):
-            with open(filename, "r") as file:
-                return pickle.load(filename)
+            try:
+                with open(filename, "rb") as file:
+                    return pickle.load(file)
+            except Exception as e:
+                return None
