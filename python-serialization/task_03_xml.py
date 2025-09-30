@@ -9,6 +9,6 @@ def deserialize_from_xml(filename):
     root = ET.parse(filename).getroot()
     dictionary = {}
     for child in root:
-        value = int(child.text) if child.text.isdigits() else child.text
+        value = int(child.text) if child.text.isdigit() else child.text
         dictionary[child.tag] = value
     return dictionary
