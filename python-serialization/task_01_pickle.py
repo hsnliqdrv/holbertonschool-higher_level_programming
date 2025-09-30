@@ -11,6 +11,10 @@ class CustomObject:
                     pickle.dump(self, file)
             except Exception as e:
                 pass
+        def display(self):
+            print("Name:", self.name)
+            print("Age:", self.age)
+            print("Is Student:", self.is_student)
         @classmethod
         def deserialize(cls, filename):
             try:
