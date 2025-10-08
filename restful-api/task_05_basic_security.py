@@ -28,7 +28,7 @@ def basic_protected():
     return "Basic Auth: Access Granted"
 
 # Token Auth
-@app.route("/login")
+@app.route("/login", methods=["POST"])
 def login():
     u = request.json.get("username")
     p = request.json.get("password")
@@ -45,7 +45,7 @@ def jwt_protected():
 @jwt_required()
 def admin_only():
     username = get_jwt_identity()
-    if users[username].role == "admin":
+    if users[username]["role"] != "admin":
         return {"error": "Admin access required"}, 403
     return "Admin Access: Granted"
 
