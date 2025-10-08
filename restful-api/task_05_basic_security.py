@@ -19,7 +19,7 @@ users = {
 auth = HTTPBasicAuth()
 @auth.verify_password
 def verify_password(u, p):
-    if u in users and check_password_hash(users[u].password, p):
+    if u in users and check_password_hash(users[u]["password"], p):
         return u
 
 @app.route("/basic-protected", methods=["GET"])
