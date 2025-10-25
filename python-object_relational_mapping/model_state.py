@@ -8,6 +8,7 @@ from sqlalchemy.orm import declarative_base
 
 Base = declarative_base()
 
+
 class State(Base):
     """Represents the State entity"""
     __tablename__ = "states"
