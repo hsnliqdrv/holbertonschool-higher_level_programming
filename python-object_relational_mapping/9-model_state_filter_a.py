@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """9-model_state_filter_a
 
-Get all State objects containing letter 'a' ordered by State.id
+This module connects to a MySQL database and retrieves all State objects
+from the states table whose name contains the letter 'a', sorted by id.
 """
 import sys
 from model_state import Base, State
