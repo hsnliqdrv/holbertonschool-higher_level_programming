@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """9-model_state_filter_a
 
-Get all State objects containing letter 'a'
+Get all State objects containing letter 'a' ordered by State.id
 """
 import sys
 from model_state import Base, State
