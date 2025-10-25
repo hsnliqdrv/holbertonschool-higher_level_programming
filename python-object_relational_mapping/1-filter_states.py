@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""0-select_states
+"""1-filter_states
 
 Select all states starting with 'N' from database on localhost:3306
 Accepts username, password and database as argv
@@ -15,7 +15,7 @@ if __name__ == "__main__":
     )
     cur = conn.cursor()
     cur.execute(
-        "SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC"
+        "SELECT * FROM states WHERE BINARY name LIKE 'N%' ORDER BY id ASC"
     )
     query_rows = cur.fetchall()
     for row in query_rows:
