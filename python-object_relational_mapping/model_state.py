@@ -1,3 +1,8 @@
+#!/usr/bin/python3
+"""model_state
+
+Create class for states table
+"""
 from sqlalchemy import Column, Integer, String, create_engine
 from sqlalchemy.orm import declarative_base, sessionmaker
 
