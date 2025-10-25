@@ -17,6 +17,6 @@ if __name__ == "__main__":
     )
     Base.metadata.create_all(engine)
     with Session(engine) as session:
-        state = session.query(State).filter(State.id == 2)
+        state = session.query(State).filter(State.id == 2).one()
         state.name = "New Mexico"
         session.commit()
