@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-"""3-my_filter_states
+"""3-my_safe_filter_states
 
-Select state from database on localhost:3306
+Select state from database on localhost:3306 *safely*
 Accepts username, password, database and keyword as argv
 """
 from sys import argv
@@ -15,8 +15,8 @@ if __name__ == "__main__":
     )
     cur = conn.cursor()
     cur.execute(
-        "SELECT * FROM states WHERE BINARY name='{}' ORDER BY id ASC"
-        .format(argv[4])
+        "SELECT * FROM states WHERE BINARY name=%s ORDER BY id ASC",
+        (argv[4],)
     )
     query_rows = cur.fetchall()
     for row in query_rows:
