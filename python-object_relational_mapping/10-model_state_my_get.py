@@ -20,9 +20,8 @@ if __name__ == "__main__":
     with Session(engine) as session:
         state = (
             session.query(State)
-            .filter(State.name == argv[4])
-            .order_by(State.id)
-            .first()
+            .filter(func.binary(State.name) == argv[4])
+            .order_by(State.id).first()
         )
         if state:
             print(state.id)
